@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WyszukiwanieDrogiWLabiryncie.StronaEdycjiMapy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WyszukiwanieDrogiWLabiryncie"
+             mc:Ignorable="d" 
+             d:DesignHeight="434" d:DesignWidth="600">
+    <Grid>
+        <Canvas x:Name="canvasEdycji" Margin="0,0,0,0" IsVisibleChanged="canvasEdycji_IsVisibleChanged" Background="#FFF4F7FA">
+            <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="195" Canvas.Left="405">
+                <Button x:Name="przyciskUstawPoglode"  Margin="55,48,55,299" BorderBrush="#00000000"  Background="#00000000" Click="przyciskUstawPoglode_Click">
+                    <StackPanel>
+                        <Image Source="obrazki/o_podloga.png" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="przyciskUstawSciane" Margin="59,183,51,167"  Click="przyciskUstawSciane_Click" BorderBrush="{x:Null}" >
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                    <StackPanel>
+                        <Image Source="obrazki/o_sciana.png" />
+                    </StackPanel>
+                </Button>
+                <TextBlock Margin="50,10,51,386" TextWrapping="Wrap" Text="Podłoga" FontSize="24" FontFamily="Microsoft YaHei UI Light" RenderTransformOrigin="0.703,0.439" TextAlignment="Center"/>
+                <TextBlock Margin="61,140,55,256" TextWrapping="Wrap" Text="Ściana" FontSize="24" FontFamily="Microsoft YaHei UI Light" RenderTransformOrigin="0.689,0.626" TextAlignment="Center"/>
+                <Button x:Name="przyciskZapisz" Content="Zapisz" Margin="55,317,51,87" FontFamily="Microsoft YaHei UI Light" FontSize="18" Click="przyciskZapisz_Click"/>
+                <Button x:Name="przyciskUruchomRozgrywke" Content="Start" Margin="55,284,51,122" FontFamily="Microsoft YaHei UI Light" FontSize="18" Click="przyciskUruchomRozgrywke_Click"/>
+                <Button x:Name="przyciskCofnij" Content="Cofnij" Margin="55,352,51,53" FontFamily="Microsoft YaHei UI Light" FontSize="18" Click="przyciskCofnij_Click"/>
+            </Grid>
+            <Grid x:Name="tlo" Background="#FFBA8352" Height="434" Width="405" />
+        </Canvas>
+    </Grid>
+</UserControl>

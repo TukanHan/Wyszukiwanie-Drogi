@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="WyszukiwanieDrogiWLabiryncie.StronaGlowna"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WyszukiwanieDrogiWLabiryncie"
+             mc:Ignorable="d" 
+             d:DesignHeight="434" d:DesignWidth="600">
+    <Grid>
+        <Image Margin="321,10,10,278.2" Source="obrazki/cloud1.png" Stretch="Fill"/>
+        <Image Margin="30,27,362,267.2" Source="obrazki/cloud2.png" Stretch="Fill"/>
+        <Button x:Name="przyciskNowaMapa" Content="Nowa mapa" Margin="164,67,164,0" FontSize="24" FontFamily="Microsoft YaHei UI Light" Height="52" VerticalAlignment="Top" Click="przyciskNowaMapa_Click"/>
+        <Button x:Name="przyciskWczytajMape" Content="Wczytaj Mapę" Height="51" Margin="164,137,164,0" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI Light" Click="przyciskWczytajMape_Click"/>
+        <Button x:Name="przyciskLosujMape" Content="Losowa mapa" Height="51" Margin="164,202,165,0" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI Light" Click="przyciskLosujMape_Click"/>
+        <Button x:Name="przyciskOProgramie" Content="O programie" Height="51" Margin="164,267,165,0" VerticalAlignment="Top" FontSize="24" FontFamily="Microsoft YaHei UI Light" Click="przyciskOProgramie_Click"/>
+        <Image Margin="500,232,1,-19.2" Source="obrazki/hill_small.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-25.058"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="52,137,469,197.2">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Source" Duration="0:0:0.2">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <BitmapImage UriSource="obrazki\tochLit.png"/>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                    <DiscreteObjectKeyFrame.Value>
+                                        <BitmapImage UriSource="obrazki\tochLit2.png"/>
+                                    </DiscreteObjectKeyFrame.Value>
+                                </DiscreteObjectKeyFrame>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        <Image Margin="30,279,479,0.2" Source="o_postacie/p3_stand.png" Stretch="Fill"/>
+        <Image Margin="258,362,268,0.2" Source="obrazki/snailWalk1.png" Stretch="Fill"/>
+        
+    </Grid>
+</UserControl>

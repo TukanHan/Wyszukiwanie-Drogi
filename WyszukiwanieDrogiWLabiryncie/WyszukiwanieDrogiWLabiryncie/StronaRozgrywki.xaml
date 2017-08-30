@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="WyszukiwanieDrogiWLabiryncie.StronaRozgrywki"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WyszukiwanieDrogiWLabiryncie"
+             mc:Ignorable="d" 
+             d:DesignHeight="434" d:DesignWidth="600">
+    <Grid>
+        <Canvas x:Name="canvasRozgrywki" Margin="0,0,0,0" Background="#FFF4F7FA" IsVisibleChanged="canvasRozgrywki_IsVisibleChanged">
+            <Image x:Name="flaga" Canvas.ZIndex="1" Source="o_flagi/flagBlue2.png" Stretch="Fill" MouseMove="Flaga_MouseMove" Canvas.Left="470" Canvas.Top="194" Height="74" Width="64" MouseDown="Flaga_MouseDown" MouseUp="Flaga_MouseUp" >
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Source"
+                                                   Duration="0:0:0.5000000">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.0000000">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <BitmapImage UriSource="o_flagi/flagBlue2.png" DecodePixelWidth="0" />
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2500000">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <BitmapImage UriSource="o_flagi/flagBlue.png"/>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+            <Image x:Name="Postac0" Canvas.ZIndex="1" Source="o_postacie/p1_front.png" Stretch="Fill"  Canvas.Left="475" Canvas.Top="64" Height="73" Width="53" MouseMove="Postac_MouseMove" />
+            <Image x:Name="Postac1" Canvas.ZIndex="1" Height="73" Canvas.Left="418" Source="o_postacie/p2_front.png" Stretch="Fill" Canvas.Top="64" Width="52" MouseMove="Postac_MouseMove" />
+            <Image x:Name="Postac2" Canvas.ZIndex="1" Height="73" Canvas.Left="533" Source="o_postacie/p3_front.png" Stretch="Fill" Canvas.Top="64" Width="52" MouseMove="Postac_MouseMove" />
+            <Grid HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="195" Canvas.Left="405">
+                <TextBlock HorizontalAlignment="Left" Height="38" Margin="62,30,0,0" TextWrapping="Wrap" Text="Postać" VerticalAlignment="Top" Width="94" FontSize="24" FontFamily="Microsoft YaHei UI Light" RenderTransformOrigin="0.689,0.626"/>
+                <TextBlock HorizontalAlignment="Left" Height="38" Margin="75,154,0,0" TextWrapping="Wrap" Text="Cel" VerticalAlignment="Top" Width="54" FontSize="24" FontFamily="Microsoft YaHei UI Light" RenderTransformOrigin="0.689,0.626"/>
+                <Button x:Name="przyciskStartuAplikacji" Content="Start" HorizontalAlignment="Left" Height="29" Margin="51,296,0,0" VerticalAlignment="Top" Width="89" FontFamily="Microsoft YaHei UI Light" FontSize="18" Click="przyciskStartuAplikacji_Click" />
+                <Button x:Name="przyciskEdycjiMapy" Content="Cofnij" HorizontalAlignment="Left" Height="29" Margin="51,338,0,0" VerticalAlignment="Top" Width="89" FontFamily="Microsoft YaHei UI Light" FontSize="18" Click="przyciskEdycjiMapy_Click" />
+            </Grid>
+            <Grid x:Name="tlo" Background="#FFBA8352" Height="434" Width="405" >
+
+            </Grid>
+        </Canvas>
+    </Grid>
+</UserControl>

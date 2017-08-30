@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WyszukiwanieDrogiWLabiryncie.StronaWyboruRozmiaruMapy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WyszukiwanieDrogiWLabiryncie"
+             mc:Ignorable="d" 
+             d:DesignHeight="434" d:DesignWidth="600">
+    <Grid>
+        <Image Margin="37,27,331,272" Source="obrazki/cloud3.png" Stretch="Fill"/>
+
+        <TextBlock Height="31" Margin="188,114,164,0" TextWrapping="Wrap" Text="Wybierz rozmiar mapy" VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft YaHei UI Light"/>
+        <Button x:Name="przyciskUtworzMape" Content="Utwórz" Height="36" Margin="228,236,208,0" VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft YaHei UI Light" Click="przyciskUtworzMape_Click"/>
+        <Button x:Name="przyciskCofnij" Content="Cofnij" Height="36" Margin="228,286,208,0" VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft YaHei UI Light" Click="przyciskCofnij_Click"/>
+        <Image Margin="37,277,447,0" Source="obrazki/cactus.png" Stretch="Fill"/>
+        <Image Margin="316,336,208,0" Source="obrazki/mushroomRed.png" Stretch="Fill"/>
+        <Image Margin="406,336,118,0" Source="obrazki/rock.png" Stretch="Fill"/>
+        <Image Margin="448,168,77,168" Source="obrazki/weight.png" Stretch="Fill"/>
+        <Image Margin="448,98,76,238" Source="obrazki/chain.png" Stretch="Fill" RenderTransformOrigin="0.513,0.682"/>
+        <Image Margin="448,27,76,308" Source="obrazki/chain.png" Stretch="Fill" RenderTransformOrigin="0.513,0.682"/>
+        <Image Margin="449,-43,76,379" Source="obrazki/chain.png" Stretch="Fill" RenderTransformOrigin="0.513,0.682"/>
+        <Slider x:Name="pasekRozmiaruMapy" HorizontalAlignment="Left" Height="19" Margin="228,177,0,0" VerticalAlignment="Top" Width="164" Minimum="4" SmallChange="1" Value="7"/>
+        <TextBlock Height="31" Margin="191,173,377,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft YaHei UI Light" TextAlignment="Center"/>
+        <TextBlock Height="31" Margin="392,173,171,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" FontSize="22" FontFamily="Microsoft YaHei UI Light" TextAlignment="Center"/>
+    </Grid>
+</UserControl>

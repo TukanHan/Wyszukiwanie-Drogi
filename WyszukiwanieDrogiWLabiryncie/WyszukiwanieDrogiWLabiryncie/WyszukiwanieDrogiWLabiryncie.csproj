@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47BCA9E8-4FBD-4EB8-9BFF-097B862F9A34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WyszukiwanieDrogiWLabiryncie</RootNamespace>
+    <AssemblyName>WyszukiwanieDrogiWLabiryncie</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Mapa.cs" />
+    <Compile Include="OdczytZapis.cs" />
+    <Compile Include="Postac.cs" />
+    <Compile Include="Pozycja.cs" />
+    <Compile Include="StronaEdycjiMapy.xaml.cs">
+      <DependentUpon>StronaEdycjiMapy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronaGlowna.xaml.cs">
+      <DependentUpon>StronaGlowna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronaInformacyjna.xaml.cs">
+      <DependentUpon>StronaInformacyjna.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronaRozgrywki.xaml.cs">
+      <DependentUpon>StronaRozgrywki.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronaWczytywaniaMapy.xaml.cs">
+      <DependentUpon>StronaWczytywaniaMapy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronaWyboruRozmiaruMapy.xaml.cs">
+      <DependentUpon>StronaWyboruRozmiaruMapy.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="StronaEdycjiMapy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronaGlowna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronaInformacyjna.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronaRozgrywki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronaWczytywaniaMapy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronaWyboruRozmiaruMapy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\signLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="o_flagi\flagBlue.png" />
+    <Resource Include="o_flagi\flagBlue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="o_postacie\p1_duck.png" />
+    <Resource Include="o_postacie\p1_front.png" />
+    <Resource Include="o_postacie\p1_jump.png" />
+    <Resource Include="o_postacie\p1_walk01.png" />
+    <Resource Include="o_postacie\p1_walk02.png" />
+    <Resource Include="o_postacie\p1_walk03.png" />
+    <Resource Include="o_postacie\p1_walk04.png" />
+    <Resource Include="o_postacie\p1_walk05.png" />
+    <Resource Include="o_postacie\p1_walk06.png" />
+    <Resource Include="o_postacie\p1_walk07.png" />
+    <Resource Include="o_postacie\p1_walk08.png" />
+    <Resource Include="o_postacie\p1_walk09.png" />
+    <Resource Include="o_postacie\p1_walk10.png" />
+    <Resource Include="o_postacie\p1_walk11.png" />
+    <Resource Include="o_postacie\p2_front.png" />
+    <Resource Include="o_postacie\p2_jump.png" />
+    <Resource Include="o_postacie\p2_walk01.png" />
+    <Resource Include="o_postacie\p2_walk02.png" />
+    <Resource Include="o_postacie\p2_walk03.png" />
+    <Resource Include="o_postacie\p2_walk04.png" />
+    <Resource Include="o_postacie\p2_walk05.png" />
+    <Resource Include="o_postacie\p2_walk06.png" />
+    <Resource Include="o_postacie\p2_walk07.png" />
+    <Resource Include="o_postacie\p2_walk08.png" />
+    <Resource Include="o_postacie\p2_walk09.png" />
+    <Resource Include="o_postacie\p2_walk10.png" />
+    <Resource Include="o_postacie\p2_walk11.png" />
+    <Resource Include="o_postacie\p3_front.png" />
+    <Resource Include="o_postacie\p3_jump.png" />
+    <Resource Include="o_postacie\p3_stand.png" />
+    <Resource Include="o_postacie\p3_walk01.png" />
+    <Resource Include="o_postacie\p3_walk02.png" />
+    <Resource Include="o_postacie\p3_walk03.png" />
+    <Resource Include="o_postacie\p3_walk04.png" />
+    <Resource Include="o_postacie\p3_walk05.png" />
+    <Resource Include="o_postacie\p3_walk06.png" />
+    <Resource Include="o_postacie\p3_walk07.png" />
+    <Resource Include="o_postacie\p3_walk08.png" />
+    <Resource Include="o_postacie\p3_walk09.png" />
+    <Resource Include="o_postacie\p3_walk10.png" />
+    <Resource Include="o_postacie\p3_walk11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\cactus.png" />
+    <Resource Include="obrazki\chain.png" />
+    <Resource Include="obrazki\cloud1.png" />
+    <Resource Include="obrazki\cloud2.png" />
+    <Resource Include="obrazki\cloud3.png" />
+    <Resource Include="obrazki\fence.png" />
+    <Resource Include="obrazki\fenceBroken.png" />
+    <Resource Include="obrazki\flyFly1.png" />
+    <Resource Include="obrazki\flyFly2.png" />
+    <Resource Include="obrazki\hill_small.png" />
+    <Resource Include="obrazki\keyBlue.png" />
+    <Resource Include="obrazki\mushroomRed.png" />
+    <Resource Include="obrazki\o_podloga.png" />
+    <Resource Include="obrazki\o_sciana.png" />
+    <Resource Include="obrazki\p1_duck.png" />
+    <Resource Include="obrazki\plant.png" />
+    <Resource Include="obrazki\pokerSad.png" />
+    <Resource Include="obrazki\rock.png" />
+    <Resource Include="obrazki\snailWalk1.png" />
+    <Resource Include="obrazki\tochLit.png" />
+    <Resource Include="obrazki\tochLit2.png" />
+    <Resource Include="obrazki\weight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\snowMid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\snowHillRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\snowHillRight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="o_postacie\p2_stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\plantPurple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="obrazki\snowCenter.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
