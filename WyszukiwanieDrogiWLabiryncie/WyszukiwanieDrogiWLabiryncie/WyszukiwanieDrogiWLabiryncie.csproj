@@ -55,10 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Flaga.cs" />
+    <Compile Include="IPrzemieczalne.cs" />
     <Compile Include="Mapa.cs" />
     <Compile Include="OdczytZapis.cs" />
     <Compile Include="Postac.cs" />
-    <Compile Include="Pozycja.cs" />
+    <Compile Include="Punkt.cs" />
     <Compile Include="StronaEdycjiMapy.xaml.cs">
       <DependentUpon>StronaEdycjiMapy.xaml</DependentUpon>
     </Compile>
@@ -77,6 +79,7 @@
     <Compile Include="StronaWyboruRozmiaruMapy.xaml.cs">
       <DependentUpon>StronaWyboruRozmiaruMapy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WyszukiwanieDrogi.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

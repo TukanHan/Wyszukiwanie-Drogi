@@ -49,7 +49,7 @@ namespace WyszukiwanieDrogiWLabiryncie
 
                     for (int i = 0; i < MainWindow.mainWindowObject.mapa.Rozmiar; ++i)
                         for (int j = 0; j < MainWindow.mainWindowObject.mapa.Rozmiar; ++j)
-                            sw.WriteLine(MainWindow.mainWindowObject.mapa.tablica[i, j]);
+                            sw.WriteLine(MainWindow.mainWindowObject.mapa.Tablica[i, j]);
                 }
             }
             catch (Exception e)

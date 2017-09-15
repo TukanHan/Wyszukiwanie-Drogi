@@ -29,7 +29,7 @@ namespace WyszukiwanieDrogiWLabiryncie
 
         private void przyciskCofnij_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzStroneGlowna(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaGlowna, this);
         }
 
         private void przyciskWczytaj_Click(object sender, RoutedEventArgs e)
@@ -42,11 +42,11 @@ namespace WyszukiwanieDrogiWLabiryncie
                 try
                 {
                     MainWindow.mainWindowObject.mapa = OdczytZapis.Odczyt(openFileDialog.FileName);
-                    MainWindow.mainWindowObject.OtworzOknoEdycji(this);
+                    MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaEdycjiMapy, this);
                 }
                 catch
                 {
-                    MainWindow.mainWindowObject.OtworzStroneGlowna(this);
+                    MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaGlowna,this);
                 }
             }
         }

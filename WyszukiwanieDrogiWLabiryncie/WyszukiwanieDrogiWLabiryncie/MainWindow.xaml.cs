@@ -16,8 +16,7 @@ using System.Windows.Shapes;
 namespace WyszukiwanieDrogiWLabiryncie
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// Rdzeń programu
+    /// Rdzeń programu, przechodzenie między okienkami
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -26,51 +25,16 @@ namespace WyszukiwanieDrogiWLabiryncie
 
         public Mapa mapa;
 
-
         public MainWindow()
         {
             InitializeComponent();
             mainWindowObject = this;
         }
 
-        #region Przejścia
-
-        public void OtworzOknoRozmiaru(UserControl obecneOkno)
+        public void OtworzOkno(UserControl otwierane, UserControl zamykane)
         {
-            stronaWyboruRozmiaruMapy.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
+            otwierane.Visibility = Visibility.Visible;
+            zamykane.Visibility = Visibility.Hidden;
         }
-
-        public void OtworzOknoWczytywania(UserControl obecneOkno)
-        {
-            stronaWczytwaniaMapy.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
-        }
-
-        public void OtworzOknoEdycji(UserControl obecneOkno)
-        {
-            stronaEdycjiMapy.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
-        }
-
-        public void OtworzOknoRozgrywki(UserControl obecneOkno)
-        {
-            stronaRozgrywki.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
-        }
-
-        public void OtworzStroneGlowna(UserControl obecneOkno)
-        {
-            stronaGlowna.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
-        }
-
-        public void OtworzStroneInformacyjna(UserControl obecneOkno)
-        {
-            stronaInformacyjna.Visibility = Visibility.Visible;
-            obecneOkno.Visibility = Visibility.Hidden;
-        }
-
-        #endregion
     }
 }

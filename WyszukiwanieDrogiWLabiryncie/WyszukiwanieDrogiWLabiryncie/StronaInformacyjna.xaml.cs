@@ -32,7 +32,7 @@ namespace WyszukiwanieDrogiWLabiryncie
 
         private void przyciskCofnij_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzStroneGlowna(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaGlowna,this);
         }
     }
 }

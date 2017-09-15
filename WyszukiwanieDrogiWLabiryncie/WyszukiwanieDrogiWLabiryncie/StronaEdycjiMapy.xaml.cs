@@ -33,9 +33,9 @@ namespace WyszukiwanieDrogiWLabiryncie
         {
             if(canvasEdycji.Visibility==Visibility.Visible)
             {
-                double skala = 400.0 / MainWindow.mainWindowObject.mapa.tablica.GetLength(0);
-                tlo.Width = MainWindow.mainWindowObject.mapa.tablica.GetLength(0) * (int)skala;
-                tlo.Height = MainWindow.mainWindowObject.mapa.tablica.GetLength(0) * (int)skala;
+                double skala = 400.0 / MainWindow.mainWindowObject.mapa.Tablica.GetLength(0);
+                tlo.Width = MainWindow.mainWindowObject.mapa.Rozmiar * (int)skala;
+                tlo.Height = MainWindow.mainWindowObject.mapa.Rozmiar * (int)skala;
 
                 var obiektyDoUsuniecia = canvasEdycji.Children.OfType<Image>().Where((obrazek) => obrazek.Tag.Equals("Pole")).ToArray();
                 foreach (Image img in obiektyDoUsuniecia)
@@ -43,13 +43,13 @@ namespace WyszukiwanieDrogiWLabiryncie
                     canvasEdycji.Children.Remove(img);
                 }
 
-                for (int i = 0; i < MainWindow.mainWindowObject.mapa.tablica.GetLength(0); ++i)
+                for (int i = 0; i < MainWindow.mainWindowObject.mapa.Rozmiar; ++i)
                 {
-                    for (int j = 0; j < MainWindow.mainWindowObject.mapa.tablica.GetLength(0); ++j)
+                    for (int j = 0; j < MainWindow.mainWindowObject.mapa.Rozmiar; ++j)
                     {
                         Image img = new Image();
 
-                        if (MainWindow.mainWindowObject.mapa.tablica[i, j] == Klocek.Sciana)
+                        if (MainWindow.mainWindowObject.mapa.Tablica[i, j] == Klocek.Sciana)
                             img.Source = new BitmapImage(new Uri("obrazki/o_sciana.png", UriKind.Relative));
                         else
                             img.Source = new BitmapImage(new Uri("obrazki/o_podloga.png", UriKind.Relative));
@@ -96,12 +96,12 @@ namespace WyszukiwanieDrogiWLabiryncie
 
         private void przyciskUruchomRozgrywke_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzOknoRozgrywki(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaRozgrywki, this);
         }
 
         private void przyciskCofnij_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzStroneGlowna(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaGlowna, this);
         }
 
         private void przyciskZapisz_Click(object sender, RoutedEventArgs e)

@@ -28,23 +28,23 @@ namespace WyszukiwanieDrogiWLabiryncie
 
         private void przyciskNowaMapa_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzOknoRozmiaru(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaWyboruRozmiaruMapy, this);
         }
 
         private void przyciskWczytajMape_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzOknoWczytywania(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaWczytwaniaMapy, this);
         }
 
         private void przyciskLosujMape_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.mainWindowObject.mapa = Mapa.LosujMape();
-            MainWindow.mainWindowObject.OtworzOknoEdycji(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaEdycjiMapy, this);
         }
 
         private void przyciskOProgramie_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzStroneInformacyjna(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaInformacyjna, this);
         }
     }
 }

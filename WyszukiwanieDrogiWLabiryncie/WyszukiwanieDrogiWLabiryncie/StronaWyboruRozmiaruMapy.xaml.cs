@@ -29,12 +29,12 @@ namespace WyszukiwanieDrogiWLabiryncie
         private void przyciskUtworzMape_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.mainWindowObject.mapa = new Mapa((uint)pasekRozmiaruMapy.Value);
-            MainWindow.mainWindowObject.OtworzOknoEdycji(this); 
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaEdycjiMapy, this);
         }
 
         private void przyciskCofnij_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainWindowObject.OtworzStroneGlowna(this);
+            MainWindow.mainWindowObject.OtworzOkno(MainWindow.mainWindowObject.stronaGlowna, this);
         }
     }
 }
